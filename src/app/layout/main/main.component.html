@@ -1,0 +1,14 @@
+<header>I'm a header</header>
+<div class="news_container" *ngIf="news | async as newsResponse">
+    <div class="news_card" *ngFor="let item of newsResponse.articles">
+        <h2>{{item.title}}</h2>
+        <div class="news_card_header">
+            <div class="news_card_header__info">{{item.source.name}}</div>
+            <div class="news_card_header__info">{{item.author}}</div>
+        </div>
+        <div class="news_card_body">
+            <div class="news_card_body__description">{{item.description}}</div>
+        </div>
+
+    </div>
+</div>
