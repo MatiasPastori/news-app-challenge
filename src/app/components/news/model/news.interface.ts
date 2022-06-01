@@ -1,4 +1,4 @@
-export interface News {
+export interface Article {
 
     //  These are response's fields that might come handy later.
     // status: string
@@ -7,7 +7,10 @@ export interface News {
 
     // articles: array[article]
 
-    source: object
+    source: {
+        name: string,
+        id: string
+    },
 
     author: string
 

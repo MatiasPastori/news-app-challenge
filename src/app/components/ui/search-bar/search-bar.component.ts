@@ -17,9 +17,9 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onKeyDownEvent(keywords: KeyboardEvent ): void {
-    console.log(keywords)
-    this.keywordChangeEvent.emit(keywords.key);
+  onInputEvent(inputEvent: any ): void {
+    // console.log(inputEvent)
+    this.keywordChangeEvent.emit(inputEvent.target.value);
   }
 
 }

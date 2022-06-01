@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'news-content',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsContentComponent implements OnInit {
 
-  constructor() { }
+  article$!: Observable<any>;
+
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.article$ = this.route.queryParams;
+
+    this.route.queryParams.subscribe(params => {
+      console.log(params)
+    })
   }
 
 }

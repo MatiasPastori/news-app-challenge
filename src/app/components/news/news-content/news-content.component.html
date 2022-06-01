@@ -1,1 +1,16 @@
-<p>news-content works!</p>
+<div class="article-container" *ngIf="article$ | async as article">
+    <div class="article-title">
+        {{article.title}}
+    </div>
+    <div class="article-header">
+        {{article.source}} & {{article.author}}
+    </div>
+    <div class="article-body">
+        <div class="article-body--description"> 
+            {{article.description}}
+        </div>
+        <div class="article-body-image">
+            <img class="article-image" src=""[src]="article.urlToImage? article.urlToImage: 'assets/img/no-image.jpg'" alt="This article has no image">
+        </div>
+    </div>
+</div>

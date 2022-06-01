@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-
 *{
     font-family: Century Gothic;
-    --main-bg-color: #323131;
+    margin: 0;
 }
+
+html{
+    height: 100%;
+}
+
+
+body{
+    height: 100%;
+    --main-bg-color: #ecdfdf;
+    --text-color: #000000;
+    --btn-bg-color: #44b3eb;
+}
+
+body.dark-theme{
+    --main-bg-color: #323131;
+    --text-color: #FFF;
+    --btn-bg-color: #d06c1e;
+}
+

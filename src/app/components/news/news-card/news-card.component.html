@@ -1,1 +1,11 @@
-<p>news-card works!</p>
+<div class="news_card" (click)="navigateToNewsContent()" >
+    <h2>{{article.title}}</h2>
+    <div class="news_card_header">
+        <div class="news_card_header__info">{{article.source.name}}</div>
+        <div class="news_card_header__info">{{article.author}}</div>
+    </div>
+    <div class="news_card_body">
+        <div class="news_card_body__description">{{article.description}}</div>
+    </div>
+
+</div>

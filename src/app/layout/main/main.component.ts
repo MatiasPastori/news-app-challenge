@@ -19,4 +19,11 @@ export class MainComponent implements OnInit {
 
   }
 
+  getNewsWithKeywords(keywords:any){
+    if(keywords===''){
+      return
+    }
+    this.news = this.newsService.getAllNews(keywords);
+  }
+
 }

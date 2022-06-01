@@ -1,1 +1,5 @@
-<search-bar  ></search-bar>
+<label>
+    <input type="checkbox">
+    <span class="theme-switch"></span>
+</label>
+<search-bar *ngIf="showSearch" (keywordChangeEvent)="onSearchChange($event)"></search-bar>
