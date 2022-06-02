@@ -1,11 +1,14 @@
 <div class="news_card" (click)="navigateToNewsContent()" >
     <h2>{{article.title}}</h2>
     <div class="news_card_header">
-        <div class="news_card_header__info">{{article.source.name}}</div>
-        <div class="news_card_header__info">{{article.author}}</div>
+        <div class="news_card_header__info">Source: {{article.source.name}}</div>
+        <div class="news_card_header__info">Author: {{article.author}}</div>
     </div>
     <div class="news_card_body">
         <div class="news_card_body__description">{{article.description}}</div>
+        <div class="news_card_body__image"> 
+            <img class="news_card_image" src=""[src]="article.urlToImage? article.urlToImage: 'assets/img/no-image.jpg'" alt="This article has no image">
+        </div>
     </div>
 
 </div>

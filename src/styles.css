@@ -1,24 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    font-family: Century Gothic;
-    margin: 0;
+body {
+    --main-bg-color: #433c4f;
+    --text-color: #e6cfcf;
+    --btn-bg-color: #d06c1e;
+    --text-shadow-color: #776e6e;
+    --switch-color:#ecdfdf;
 }
 
-html{
-    height: 100%;
-}
-
-
-body{
-    height: 100%;
+body.dark {
     --main-bg-color: #ecdfdf;
     --text-color: #000000;
     --btn-bg-color: #44b3eb;
+    --text-shadow-color: #776e6e;
+    --switch-color: #433c4f;
 }
 
-body.dark-theme{
-    --main-bg-color: #323131;
-    --text-color: #FFF;
-    --btn-bg-color: #d06c1e;
+* {
+    font-family: Century Gothic;
+    margin: 0;
+    color: var(--text-color);
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+html,
+body {
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    transition: all .3s ease-in-out;
+
+}

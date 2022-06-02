@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NewsCardComponent } from './components/news/news-card/news-card.component';
 import { NewsContentComponent } from './components/news/news-content/news-content.component';
 import { MainComponent } from './layout/main/main.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { MainComponent } from './layout/main/main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
