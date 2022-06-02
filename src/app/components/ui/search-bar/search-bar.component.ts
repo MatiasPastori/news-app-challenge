@@ -18,7 +18,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   onInputEvent(inputEvent: any ): void {
-    // console.log(inputEvent)
     this.keywordChangeEvent.emit(inputEvent.target.value);
   }
 

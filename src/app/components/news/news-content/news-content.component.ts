@@ -16,10 +16,6 @@ export class NewsContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.article$ = this.route.queryParams;
-
-    this.route.queryParams.subscribe(params => {
-      console.log(params)
-    })
   }
 
 }
